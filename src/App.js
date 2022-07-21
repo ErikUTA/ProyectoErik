@@ -70,8 +70,7 @@ function App(props) {
         const url = elemento.data.url.split('/');
         axios.get(`https://pokeapi.co/api/v2/pokemon/${url[6]}`).then(data => {
           setArray((current) => [...current, {data: data.data}]);
-        });
-        console.log(newArray);
+        });        
       });  
     }
   }, [newArray]);

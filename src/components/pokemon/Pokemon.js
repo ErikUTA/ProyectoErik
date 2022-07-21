@@ -10,8 +10,7 @@ function Pokemon(){
     
     useEffect(() => {            
         axios.get(`https://pokeapi.co/api/v2/pokemon/${location[2]}`).then(data => {
-            setPokemonInfo(data.data);         
-            console.log(data.data);   
+            setPokemonInfo(data.data);
         });        
     }, []);    
 
