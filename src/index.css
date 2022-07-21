@@ -1,13 +1,292 @@
 body {
+  background-image: url('https://free4kwallpapers.com/uploads/originals/2018/06/18/created-a-3d-render-of-a-pokemon-trophy-in-the-grass-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-one {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+
+.btn-left {
+  background-image: url('../public/assets/equipo-amarillo.png');
+  background-size: 80%;
+  background-position: center center !important;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid transparent 0px;
+  padding: 10px;
+  margin: 25px 10px 0px 0px;
+  position: relative;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.btn-left:hover {
+  bottom: 5px;
+}
+
+.btn-right {
+  background-image: url('../public/assets/equipo-amarillo.png');
+  background-size: 80%;
+  background-position: center center !important;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid transparent 0px;
+  padding: 10px;
+  margin: 25px 0px 0px 10px;
+  position: relative;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.btn-right:hover {
+  bottom: 5px;
+}
+
+.img-pokemon {
+  border: solid #0097DC 5px;
+  border-radius: 15px;
+  background: rgb(196, 239, 186);
+  margin: 10px;
+  box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+
+.img-pokemon:hover {
+  transition: all .2s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.h1-pokemon {
+  text-shadow: 0 0 2px #fff;
+}
+
+.golden {
+  background-image: url('https://i.pinimg.com/originals/2d/f0/78/2df078d82dc2c9da66c1928e360c9355.png');
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black 3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.golden:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.change {
+  background-image: url('../public/assets/lucha.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* border: solid black 3px; */
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.change:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.btn-info {
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+  width: 50px;
+  border: solid black 3px;
+  background: #0097DC;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background: royalblue;
+}
+
+.center-a-poke {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  height: 97.2vh;
+}
+
+.app-pokemon {
+  display: flex;
+  height: 100vh;
+}
+
+.center-b {
+  width: 100%;
+  height: 100vh;
+}
+
+/***************************** MiPerfil *******************************/
+
+.perfil {
+  text-align: center;
+  height: 40vh;
+  width: 30vw;
+  border: solid #0097DC 5px;
+  border-radius: 15px;
+  background: rgb(196, 239, 186);
+  margin: 10px;
+  box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+
+.perfil:hover {
+  transition: all .2s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.foto-perfil {
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.closemenu {
+  padding: 4%;
+}
+
+.pro-sidebar > .pro-sidebar-inner {
+  background: rgb(30, 30, 30) !important;
+	border: 10px outset #0097DC;
+	color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pro-sidebar-header, .pro-sidebar-content, .pro-sidebar-footer {
+  padding: 5%;
+  border-bottom: 0px !important;
+}
+
+.pokemons {
+  text-align: center;
+  height: auto;
+  width: 30vw;
+  border: solid #0097DC 5px;
+  border-radius: 15px;
+  background: rgb(196, 239, 186);
+  margin: 10px;
+  box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -8px 10px 5px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+
+.pokemons:hover {
+  transition: all .2s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.abilities {
+  background: #0097DC;
+  color: wheat;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/********************************* Colors *********************************/
+
+.steel {
+  background: #CCCCCC;
+}
+.water {
+  background: #B0E2FF;
+}
+.bug {
+  background: #99CC33;
+}
+.dragon {
+  background: #AB82FF;
+}
+.electric {
+  background: #FFD700;
+}
+.ghost {
+  background: #778899;
+}
+.fire {
+  background: #FF7F00;
+}
+.fairy {
+  background: #FFB0FF;
+}
+.ice {
+  background: #ADD8E6;
+}
+.fighting {
+  background: #FF6A6A;
+}
+.regular {
+  background: #DDCCAA;
+}
+.plant {
+  background: #99FF66;
+}
+.psychic {
+  background: #FFB5C5;
+}
+.rock {
+  background: #CD853F;
+}
+.sinister {
+  background: #A9A9A9;
+}
+.ground {
+  background: #A9A9A9;
+}
+.poison {
+  background: #CC88BB;
+}
+.flying {
+  background: #BAAAFF;
 }
