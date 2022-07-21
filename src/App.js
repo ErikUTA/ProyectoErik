@@ -37,6 +37,7 @@ function App(props) {
   const [pokemon, setPokemon] = useState([]);   
   const [pokemonInfo, setPokemonInfo] = useState([]);   
   const [array, setArray] = useState([]);
+  const [newArray, setNewArray] = useState([]);
   const [numberOne, setNumberOne] = useState(0);
   const [numberTwo, setNumberTwo] = useState(10); 
   const [shiny, setShiny] = useState(false);
@@ -50,19 +51,31 @@ function App(props) {
   }, []);
 
   useEffect(() => {
+    setNewArray([]);
     if(pokemonInfo.length > 0){
-      pokemonInfo.slice(numberOne, numberTwo).filter((elemento) => {
+      pokemonInfo.filter((elemento) => {
         if(elemento.name.toString().toLowerCase().includes(info.search)){
-          setArray([]);
-          const url = elemento.url.split('/');
-          axios.get(`https://pokeapi.co/api/v2/pokemon/${url[6]}`).then(data => {
-            setArray((current) => [...current, {data: data.data}]);            
-          });
+          setNewArray((current) => [...current, {data: elemento}]);                              
         }
       });    
     }
   }, [info]);
 
+  useEffect(() => {
+    setArray([]);
+    if(newArray.length === 1126){
+      pokeChange();
+    }else{
+      newArray.slice(0, 10).map(elemento => {
+        const url = elemento.data.url.split('/');
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${url[6]}`).then(data => {
+          setArray((current) => [...current, {data: data.data}]);
+        });
+        console.log(newArray);
+      });  
+    }
+  }, [newArray]);
+  
   useEffect(() => {
     pokeChange();
   }, [pokemonInfo]);
